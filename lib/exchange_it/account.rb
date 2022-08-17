@@ -1,5 +1,7 @@
 module ExchangeIt
-  class account
+  class Account
+    include ExchangeIt::Utils::Uid
+
     attr_reader :uid, :balance 
     def initialize(user)
       @uid = hash user.name, user.surname
